@@ -9,8 +9,12 @@ body {
   background-color: #f7f7f7;
   padding: 50px;
 }
+
+/* Header */
 .header {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 50px;
 }
 
@@ -25,6 +29,16 @@ body {
   color: #444;
 }
 
+/* Passport Photo */
+.passport-photo {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #15936f;
+  border-radius: 4px;
+}
+
+/* Resume Layout */
 .resume {
   display: flex;
   justify-content: center;
@@ -44,6 +58,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* Timeline Box */
 .timeline-box {
   background-color: white;
   padding: 22px;
@@ -51,7 +66,7 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
   position: relative;
   transition: 0.3s;
-  height: 140px;
+  min-height: 140px;
 }
 
 .timeline-box::before {
@@ -88,13 +103,80 @@ body {
   color: #444;
 }
 
+/* Tablet View */
 @media (max-width: 900px) {
+  body {
+    padding: 25px;
+  }
+
+  .header {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .passport-photo {
+    width: 75px;
+    height: 95px;
+  }
+
   .resume {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
   .column {
     width: 100%;
+    max-width: 500px;
+  }
+
+  .timeline-box {
+    min-height: auto;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 500px) {
+  body {
+    padding: 15px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .passport-photo {
+    width: 65px;
+    height: 85px;
+  }
+
+  .column {
+    padding-left: 20px;
+  }
+
+  .column h2 {
+    font-size: 16px;
+  }
+
+  .timeline-box {
+    padding: 18px;
+  }
+
+  .timeline-box::before {
+    left: -29px;
+  }
+
+  .timeline-box h3 {
+    font-size: 14px;
+  }
+
+  .timeline-box p {
+    font-size: 12px;
   }
 }
