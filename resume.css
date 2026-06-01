@@ -15,7 +15,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 50px;
+  max-width: 950px;
+  margin: 0 auto 50px;
+}
+
+.header-content {
+  flex: 1;
+  text-align: center;
 }
 
 .header h1 {
@@ -36,6 +42,7 @@ body {
   object-fit: cover;
   border: 1px solid #15936f;
   border-radius: 4px;
+  display: block;
 }
 
 /* Resume Layout */
@@ -58,7 +65,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Timeline Box */
+/* Timeline Boxes */
 .timeline-box {
   background-color: white;
   padding: 22px;
@@ -66,7 +73,6 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
   position: relative;
   transition: 0.3s;
-  min-height: 140px;
 }
 
 .timeline-box::before {
@@ -103,7 +109,7 @@ body {
   color: #444;
 }
 
-/* Tablet View */
+/* Tablet */
 @media (max-width: 900px) {
   body {
     padding: 25px;
@@ -112,7 +118,6 @@ body {
   .header {
     flex-direction: column-reverse;
     align-items: center;
-    text-align: center;
     gap: 15px;
   }
 
@@ -131,13 +136,9 @@ body {
     width: 100%;
     max-width: 500px;
   }
-
-  .timeline-box {
-    min-height: auto;
-  }
 }
 
-/* Mobile View */
+/* Mobile */
 @media (max-width: 500px) {
   body {
     padding: 15px;
@@ -158,10 +159,6 @@ body {
 
   .column {
     padding-left: 20px;
-  }
-
-  .column h2 {
-    font-size: 16px;
   }
 
   .timeline-box {
